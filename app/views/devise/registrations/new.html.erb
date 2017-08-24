@@ -1,0 +1,72 @@
+
+<div class="site-wrapper" style="background:url('<%= asset_path('cleaner-1.png') %>') 50% 50% no-repeat;">
+
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="masthead clearfix">
+        <div class="inner">
+        </div>
+      </div>
+
+      <div id="formLogin" class="inner cover text-center" data-animation="fadeIn" data-animation-delay="100">
+        <br><br>
+        <h3 class="font-pacifico cover-heading mb20 mt20">Register YourSelf</h3>
+        <!--<form class="clearfix mb35">-->
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+            <div class="col-md-8 col-sm-offset-2 pb10">
+              <label for="title">Select a Type:</label>
+              <div class="form-group form-control text-center no-border input-lg input-circle bg-light-transparent ">
+                <%= f.select :role_id, options_for_select(Role.where.not(role_name: 'Admin').collect { |p| [p[:role_name], p[:id]] }), { include_blank: 'Select Service' }, class: 'form-control' %>
+              </div>
+            </div>
+
+
+              <div class="col-sm-8 col-sm-offset-2">
+                <%= f.text_field :name, autofocus: true , class: 'form-control text-center no-border input-lg input-circle bg-light-transparent', placeholder: 'Name' %>
+              </div>
+
+              <div class="col-sm-8 col-sm-offset-2 mt10">
+                <%= f.email_field :email, autocomplete: "off" , class: 'form-control text-center no-border input-lg input-circle bg-light-transparent' , placeholder: 'Email'%>
+              </div>
+
+              <div class="col-sm-8 col-sm-offset-2 mt10">
+                <%= f.password_field :password, autocomplete: "off" , class: 'form-control text-center no-border input-lg input-circle bg-light-transparent' , placeholder: 'Password'%>
+              </div>
+            <% if @validatable %>
+                <span class="help-block"><%= @minimum_password_length %> characters minimum</span>
+            <% end %>
+
+              <div class="col-sm-8 col-sm-offset-2 mt10">
+                <%= f.password_field :password_confirmation, autocomplete: "off" , class: 'form-control text-center no-border input-lg input-circle bg-light-transparent' , placeholder: 'Confirmation Password'%>
+              </div>
+
+          <div class="col-sm-8 col-sm-offset-2 mt5">
+            <button class="button button-lg button-circle button-block button-pasific hover-ripple-out">SignUp</button><br><br>
+          <% end %>
+
+
+            <!--<a href="#" class="color-light mt20" id="showFormRegister">Register Now.</a>-->
+            <%= link_to 'Have an account? Login here', new_user_session_path ,class: "color-light mt20"%>
+          </div>
+
+        <!--</form>-->
+        <br>
+      </div>
+
+
+
+      <!--<div class="mastfoot">-->
+      <!--<div class="inner">-->
+      <!--<p class="color-light text-center">&copy;2016 Pasific Templare by Myboodesign.com</p>-->
+      <!--</div>-->
+      <!--</div>-->
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--%= render "devise/shared/links" %-->

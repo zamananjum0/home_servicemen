@@ -1,0 +1,303 @@
+
+
+<!-- Intro Area
+===================================== -->
+<header class="pt100 pb100 parallax-window-2" style="background:url(../electrician.png) 0 0 no-repeat #111;">
+  <div class="intro-body text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 pt50">
+          <h1 class="brand-heading font-montserrat text-uppercase color-light" data-in-effect="fadeInDown">
+            About Our Company
+            <small class="color-light alpha7">More about us</small>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- About Area
+===================================== -->
+<div id="about" class="pt75 pb50">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <img src="../plumber.png" alt="about us" class="img-responsive center-block">
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <h3>
+          We are small creative agency
+          <small class="heading heading-solid"></small>
+        </h3>
+        <p>
+         We provide services at your door step.We are passionate to serve you in enthusiastic manner. We provide services in cheap rate differ from markets.  <br>
+        </p>
+        <% if !user_signed_in? %>
+          <%= link_to 'Book a New Request', new_service_path ,:class=> 'button button-md button-red hover-ripple-out'%>
+        <% end %>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+<!-- Team Area
+<!--===================================== &ndash;&gt;-->
+<!--<div id="team" class="bg-gray pt70 pb70">-->
+  <!--<div class="container-fluid">-->
+    <!--<div class="row">-->
+      <!--<h4 class="text-center">-->
+        <!--Creative Team-->
+        <!--<small class="heading heading-solid center-block"></small>-->
+      <!--</h4>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+
+      <!--<div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 mt30">-->
+        <!--<div class="team team-two">-->
+          <!--<img src="assets/img/team/img-team-1.jpg" alt="" class="img-responsive">-->
+          <!--<div class="team-social">-->
+            <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+            <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+            <!--<a href="#"><i class="fa fa-github"></i></a>-->
+          <!--</div>-->
+          <!--<h5>Michael Doe<small class="color-pasific">Co-Founder &amp; CEO</small></h5>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-2 col-sm-4 col-xs-6 mt30">-->
+        <!--<div class="team team-two">-->
+          <!--<img src="assets/img/team/img-team-2.jpg" alt="" class="img-responsive">-->
+          <!--<div class="team-social">-->
+            <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+            <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+            <!--<a href="#"><i class="fa fa-github"></i></a>-->
+          <!--</div>-->
+          <!--<h5>Michael Doe<small class="color-pasific">Co-Founder &amp; CEO</small></h5>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-2 col-sm-4 col-xs-6 mt30">-->
+        <!--<div class="team team-two">-->
+          <!--<img src="assets/img/team/img-team-3.jpg" alt="" class="img-responsive">-->
+          <!--<div class="team-social">-->
+            <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+            <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+            <!--<a href="#"><i class="fa fa-github"></i></a>-->
+          <!--</div>-->
+          <!--<h5>Michael Doe<small class="color-pasific">Co-Founder &amp; CEO</small></h5>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-2 col-sm-4 col-xs-6 mt30">-->
+        <!--<div class="team team-two">-->
+          <!--<img src="assets/img/team/img-team-4.jpg" alt="" class="img-responsive">-->
+          <!--<div class="team-social">-->
+            <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+            <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+            <!--<a href="#"><i class="fa fa-github"></i></a>-->
+          <!--</div>-->
+          <!--<h5>Michael Doe<small class="color-pasific">Co-Founder &amp; CEO</small></h5>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-2 col-sm-4 col-xs-6 mt30">-->
+        <!--<div class="team team-two">-->
+          <!--<img src="assets/img/team/img-team-5.jpg" alt="" class="img-responsive">-->
+          <!--<div class="team-social">-->
+            <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+            <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+            <!--<a href="#"><i class="fa fa-github"></i></a>-->
+          <!--</div>-->
+          <!--<h5>Michael Doe<small class="color-pasific">Co-Founder &amp; CEO</small></h5>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+    <!--</div>-->
+
+    <!--<div class="row text-center mt40">-->
+      <!--<a class="button button-lg button-pasific hover-ripple-out">We are hiring</a>-->
+    <!--</div>-->
+
+  <!--</div>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash; Fun Fact Area-->
+<!--===================================== &ndash;&gt;-->
+<!--<div id="fact" class="pt70 pb30" style="background: url(/images/bg/bg-parallax-5.jpg) 0 0 repeat-y;">-->
+  <!--<div class="container">-->
+
+    <!--<div class="row">-->
+      <!--<div class="col-md-8 col-md-offset-2 text-center mb20">-->
+        <!--<h4 class="text-center color-light">-->
+          <!--Company In Numbers-->
+          <!--<small class="heading heading-solid center-block"></small>-->
+        <!--</h4>-->
+
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row mb25">-->
+
+      <!--<div class="col-md-2 col-md-offset-1 col-sm-6 col-xs-12">-->
+        <!--<div class="fact">-->
+          <!--<div class="fact-number timer" data-perc="850">-->
+            <!--<span class="factor color-blue"></span>-->
+          <!--</div>-->
+          <!--<span class="fact-title color-gray">Projects Completed</span>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-2 col-sm-6 col-xs-12">-->
+        <!--<div class="fact">-->
+          <!--<div class="fact-number timer" data-perc="925">-->
+            <!--<span class="factor color-green"></span>-->
+          <!--</div>-->
+          <!--<span class="fact-title color-gray">Happy Clients</span>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-2 col-sm-6 col-xs-12">-->
+        <!--<div class="fact">-->
+          <!--<div class="fact-number timer" data-perc="250">-->
+            <!--<span class="factor color-pasific"></span>-->
+          <!--</div>-->
+          <!--<span class="fact-title color-gray">Coffee Cups</span>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-2 col-sm-6 col-xs-12">-->
+        <!--<div class="fact">-->
+          <!--<div class="fact-number timer" data-perc="520">-->
+            <!--<span class="factor color-cyan"></span>-->
+          <!--</div>-->
+          <!--<span class="fact-title color-gray">Professional Staff</span>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-2 col-sm-6 col-xs-12">-->
+        <!--<div class="fact">-->
+          <!--<div class="fact-number timer" data-perc="25">-->
+            <!--<span class="factor color-yellow"></span>-->
+          <!--</div>-->
+          <!--<span class="fact-title color-gray">Press Released</span>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    <!--</div>-->
+
+    <!--<div class="row">-->
+      <!--<div class="col-sm-10 col-sm-offset-1 text-center">-->
+        <!--<img src="assets/img/other/img-other-6.png" alt="devices" class="img-responsive center-block mb-100">-->
+      <!--</div>-->
+    <!--</div>-->
+
+  <!--</div>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash; Feature Area-->
+<!--=====================================&ndash;&gt;-->
+<!--<div id="feature" class="pt75 pb50">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<h4 class="text-center">-->
+        <!--Amazing Template Features-->
+        <!--<small class="heading-desc text-lowercase">-->
+          <!--Lorem ipsum dolor sit amet consectetur adipiscing elit morbi sagittis.-->
+        <!--</small>-->
+        <!--<small class="heading heading-solid center-block"> </small>-->
+      <!--</h4>-->
+    <!--</div>-->
+
+    <!--<div class="row mt50">-->
+
+      <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<div class="content-box content-box-icon-o content-box-left-icon mb30">-->
+          <!--<span class="icon-mobile color-pasific"></span>-->
+          <!--<h5>Mobile Optimzed</h5>-->
+          <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit commodi pariatur magni omnis reiciendis architecto.</p>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<div class="content-box content-box-icon-o content-box-left-icon mb30">-->
+          <!--<span class="icon-tools color-pasific"></span>-->
+          <!--<h5>Easy to Customize</h5>-->
+          <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit commodi pariatur magni omnis reiciendis architecto.</p>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<div class="content-box content-box-icon-o content-box-left-icon mb30">-->
+          <!--<span class="icon-browser color-pasific"></span>-->
+          <!--<h5>Corss Browsers</h5>-->
+          <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit commodi pariatur magni omnis reiciendis architecto.</p>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<div class="content-box content-box-icon-o content-box-left-icon mb30">-->
+          <!--<span class="icon-wallet color-pasific"></span>-->
+          <!--<h5>Save Money</h5>-->
+          <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit commodi pariatur magni omnis reiciendis architecto.</p>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<div class="content-box content-box-icon-o content-box-left-icon mb30">-->
+          <!--<span class="icon-layers color-pasific"></span>-->
+          <!--<h5>Clean Code</h5>-->
+          <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit commodi pariatur magni omnis reiciendis architecto.</p>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<div class="content-box content-box-icon-o content-box-left-icon mb30">-->
+          <!--<span class="icon-video color-pasific"></span>-->
+          <!--<h5>Video Background</h5>-->
+          <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit commodi pariatur magni omnis reiciendis architecto.</p>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+    <!--</div>-->
+
+  <!--</div>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash; Info Area-->
+<!--=====================================&ndash;&gt;-->
+<!--<div id="info" class="bg-dark2 pt50 pb25">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-6">-->
+        <!--<img src="assets/img/other/img-other-13.png" alt="" class="img-responsive">-->
+      <!--</div>-->
+      <!--<div class="col-md-6 mt25">-->
+        <!--<h3 class="color-light font-open-sans">More Than 1,200 People Love Our Product.<br>Join with us now.</h3>-->
+        <!--<a class="button button-pasific button-md pull-left mt25 hover-ripple-out">Purchase Now</a>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+

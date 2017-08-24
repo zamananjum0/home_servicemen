@@ -1,0 +1,84 @@
+
+
+<!-- Intro Area
+===================================== -->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item carousel-img carousel-img5 active">
+      <div class="container">
+        <div class="carousel-caption " data-animation="bounceInDown" data-animation-delay="100">
+          <h1 class="font-pacifico text-capitalize color-light">Welcome to Home Serviceman</h1>
+          <p class=" color-light mt25">A Human Resource Organization for providing Services...<br><br>
+            <% if !user_signed_in? %>
+                <%= link_to 'Become a Serviceman/Client', new_user_registration_path , class: 'button button-red button-lg hover-ripple-out'%>
+            <% end %>
+            <!--<a href="#" class="button button-pasific hover-ripple-out button-md mt30">Start Project</a>-->
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="item carousel-img carousel-img6">
+      <div class="container">
+        <div class="carousel-caption text-left " data-animation="bounceInLeft" data-animation-delay="100">
+          <h1 class="text-left font-pacifico text-capitalize color-light">A Plateform <br>to Provide a reliable Service</h1>
+          <p class="color-light text-left mt20 ml10">Plumber. Electricians. Carpenter. Cleaner. Etc.<br>
+            <% if !user_signed_in? %>
+                <%= link_to 'Become a Serviceman/Client', new_user_registration_path , class: 'button button-red button-lg hover-ripple-out'%>
+            <% end %>
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="item carousel-img carousel-img8">
+      <div class="container">
+        <div class="carousel-caption " data-animation="bounceInUp" data-animation-delay="100">
+          <h1 class="font-pacifico text-capitalize color-black mt-25">
+            <span class="alpha7">We</span> <span class="infinite pulse alpha10"><i class="fa fa-heart color-pasific"></i></span> <span class="alpha7">to serve you</span>
+          </h1>
+          <p class="color-dark">
+            <% if !user_signed_in? %>
+                <%= link_to 'Become a Serviceman/Client', new_user_registration_path , class: 'button button-red button-lg hover-ripple-out'%>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+
+<div id="screenshots" class="bb-solid-1 pb50">
+  <div class="container">
+
+    <div class="row">
+      <h3 class="text-center pt75 mb50">
+        Servicemen Map
+        <small class="heading-desc text-lowercase">
+        </small>
+        <small class="heading heading-solid center-block"></small>
+      </h3>
+    </div>
+
+    <div class="row">
+      <div class="map_marker_description text-center">
+        <img width="880" src="https://maps.googleapis.com/maps/api/staticmap?center=Lahore&zoom=11&scale=1&size=640x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7CLahore" alt="Google Map of Pakistan">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

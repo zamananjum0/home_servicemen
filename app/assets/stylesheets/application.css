@@ -1,0 +1,58 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require bootstrap-datepicker
+
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import 'main';
+@import 'owl.carousel';
+@import 'owl.theme';
+@import 'owl.transitions';
+@import 'pasific';
+@import 'setting';
+@import 'simple-text-rotator';
+@import 'typed';
+@import 'magnific-popup-zoom-gallery';
+@import 'magnific-popup';
+@import 'magic.min';
+@import 'linea-weather-10';
+@import 'linea-software-10';
+@import 'linea-music-10';
+@import 'linea-ecommerce-10';
+@import 'linea-basic-elaboration-10';
+@import 'linea-arrows-10';
+@import 'ion.rangeSlider.skinFlat';
+@import 'ion.rangeSlider';
+@import 'hover';
+@import 'et-line-font';
+@import 'demo';
+@import 'cover';
+@import 'bw';
+@import 'bootstrap.min';
+@import 'animate';
+/*@import 'animate.min';*/
+
+
+
+
+
+
+
+
+
+

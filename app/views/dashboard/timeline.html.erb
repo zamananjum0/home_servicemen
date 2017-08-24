@@ -1,0 +1,82 @@
+<br><br><br>
+
+<div class="container pb50">
+</div>
+
+
+
+<!-- Blog Area
+===================================== -->
+<div id="blog" class="pt0 pb50">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-9 col-md-push-3 mt25">
+        <div class="row">
+          <div class="col-md-12 col-sm-6 col-xs-12 mb50">
+            <h4 class="text-center mb30 danger">My Bookings</h4>
+            <table class="table">
+              <thead>
+              <tr class="info">
+                <th>Service</th>
+                <th>Date/Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="success">
+
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Blog Sidebar
+      ===================================== -->
+      <div id="sidebar" class="col-md-3 col-md-pull-9 mt50 " data-animation="fadeInRight" data-animation-delay="250">
+
+
+
+        <!-- Categories
+        ===================================== -->
+        <div class="mt25 pr25 clearfix">
+          <h5 class="mt25">
+            Categories
+            <span class="heading-divider mt10"></span>
+          </h5>
+          <ul class="shop-sidebar pl25">
+            <% if current_user.role.role_name == 'User' %>
+                <li><%= link_to 'Book a New Request', new_service_path %></li>
+          <% end %>
+
+            <!--% if current_user.role.role_name != 'User' %-->
+              <li><%= link_to 'All Pending Booking Request', services_path %></li>
+            <!--% end %-->
+
+            <li><%= link_to 'All Accepted Request', accepted_request_services_path %></li>
+            <li><%= link_to 'All Completed Request', completed_request_services_path%></li>
+            <li><%= link_to 'All Cancelled Request', cancelled_request_services_path %></li>
+
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+

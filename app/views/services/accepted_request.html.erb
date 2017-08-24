@@ -1,0 +1,77 @@
+
+
+<div class="container pb60">
+</div>
+<br><br>
+
+
+<p id="notice"><%= notice %></p>
+<div id="blog" class="pt10 pb50">
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-9 col-md-push-3 mt25">
+      <h4 class="alert alert-danger mt15 text-center text-uppercase">Accepted Booking Requests</h4>
+
+      <table class="table table-striped ">
+        <thead>
+        <tr class="info">
+          <th>#</th>
+          <th>Service Name</th>
+          <th>Status</th>
+          <th>Accepted by</th>
+          <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="success table table-bordered">
+          <% @services.each_with_index do |req,index| %>
+            <tr class="warning">
+              <td><%= index + 1 %></td>
+              <td><%= link_to req.service_name ,service_path(req.id)%></td>
+              <td><%= req.status %></td>
+              <td><%= req.service_man.name %></td>
+              <td><%=req.phone_no %></td>
+        <% end %>
+        </tr>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Blog Sidebar
+  ===================================== -->
+    <div id="sidebar" class="col-md-3 col-md-pull-9 mt50 " data-animation="fadeInRight" data-animation-delay="250">
+
+
+
+      <!-- Categories
+      ===================================== -->
+      <div class="mt25 pr25 clearfix">
+        <h5 class="mt25">
+          Requests
+          <span class="heading-divider mt10"></span>
+        </h5>
+        <ul class="shop-sidebar pl25">
+          <% if current_user.role.role_name == 'User' %>
+              <li><%= link_to 'Book a New Request', new_service_path %></li>
+          <% end %>
+          <!--% if current_user.role.role_name != 'User' %-->
+          <li><%= link_to 'All Pending Booking Request', services_path %></li>
+          <!--% end %-->
+
+          <li><%= link_to 'All Accepted Request', accepted_request_services_path %></li>
+          <li><%= link_to 'All Completed Request', completed_request_services_path%></li>
+          <li><%= link_to 'All Cancelled Request', cancelled_request_services_path %></li>
+
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+

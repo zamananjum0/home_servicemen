@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Home Serviceman" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Home Serviceman" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8&callback=initMap"-->
+            <!--async defer></script>-->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8&callback=initMap"
+            async defer></script>
+    <%= csrf_meta_tags %>
+  </head>
+
+
+    <%= render 'layouts/navigation' %>
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+  <%= render 'layouts/footer' %>
+
+  </body>
+
+</html>
+

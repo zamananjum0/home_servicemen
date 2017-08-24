@@ -1,0 +1,41 @@
+<header class="bg-grad-stellar mt70">
+
+  <div class="container">
+  </div>
+</header>
+
+<section id="blog" class="pt75 pb50">
+  <div class=" container">
+
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <div class="blog-three-mini">
+          <h2 class="color-dark"><a href="#">Your request</a></h2>
+          <div class="blog-three-attrib">
+            <div><i class="fa fa-calendar"></i><%= @service.created_at.strftime('%B %d %Y')%></div>
+
+            <h4>Require Service:-<%= @service.service_name %></h4>
+            <h4>Current Status:-<%= @service.status %></h4>
+            <h4>Phone No:-<%= @service.phone_no %></h4>
+
+            <h4>Address:-<%= @service.address %></h4>
+
+            <p class="lead mt25">
+              <%= @service.description %>
+            </p>
+
+
+            <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@service.latitude},#{@service.longitude}&markers=#{@service.latitude},#{@service.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
+                          class: 'img-fluid img-rounded', alt: "#{@service.address} on the map"%>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

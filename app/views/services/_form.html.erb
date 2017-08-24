@@ -1,0 +1,68 @@
+<div class="container pb80">
+</div>
+<br><br>
+<div class="container ">
+  <h4 class="alert alert-danger mt15 text-center text-uppercase">Create a New posts</h4>
+</div>
+
+<%= form_for(@service) do |f| %>
+    <% if @service.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+          <ul>
+            <% @service.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="bg-gray container ">
+
+      <div class="col-md-3 pt20">
+        <div class="form-group">
+          <label for="title">Your Required Service name:</label>
+          <%= f.text_field :service_name, :class =>'input-xs input-circle form-control ', :placeholder => 'Service Title Here...' %>
+        </div>
+      </div>
+
+      <div class="col-md-3 pt20">
+        <label for="title">Select a Service:</label>
+        <div class="form-group ">
+          <%= f.select :role_id, options_for_select(Role.where.not(role_name: 'Admin').collect { |p| [p[:role_name], p[:id]] }), { include_blank: 'Select Service' }, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="col-md-3 pt20">
+        <div class="form-group">
+          <label for="title">Your Address:</label>
+          <%= f.text_field :raw_address, :class =>'input-xs input-circle form-control ', :placeholder => 'Address Here...' %>
+        </div>
+      </div>
+      <div class="col-md-3 pt20">
+        <div class="form-group">
+          <label for="title">Phone No:</label>
+          <%= f.text_field :phone_no, :class =>'input-xs input-circle form-control ', :placeholder => 'Phone no Here...' %>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 pt20 pl25 pr25">
+          <div class="form-group">
+            <label for="title">Description:</label>
+            <%= f.text_area :description, :class =>' form-control pb80 ', :placeholder => 'Description Here...' %>
+            <!--<textarea name="message" rows="9" placeholder="Message" class="form-control" required></textarea>-->
+            <div class="input-bottom-line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 pt30">
+        <button type="submit" id="submit" name="submit" class="button button-pasific button-lg hover-ripple-out">Request Now</button>
+        <br>
+        <br></div>
+<% end %>
+
+</div>
+
+

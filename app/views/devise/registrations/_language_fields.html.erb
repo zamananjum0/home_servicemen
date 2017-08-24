@@ -1,0 +1,37 @@
+
+  <div class="nested-fields">
+    <br><br>
+
+    <div class = 'well'>
+
+      <div class="column col-xs-12 col-sm-3">
+        <label for="Language">Language:</label>
+        <%= f.text_field :language, :class => 'form_group'%>
+      </div>
+
+
+      <div class=" col-xs-3 col-sm-2">
+        <%= f.label :Read%>
+        <%= select_tag(:read, options_for_select([['Advance', 'advance'], ['Proficient', 'Proficient'], ['Learner', 'Learner'], ['Advance', 'Advance']], selected: :option )) %>
+      </div>
+
+
+      <div class="col-xs-2 col-sm-2" >
+        <%= f.label :Write %>
+        <%= select_tag(:write, options_for_select([['Advance', 'Advance'], ['Proficient', 'Proficient'], ['Learner', 'Learner'], ['Advance', 'Advance']],  selected: :option )) %>
+      </div>
+
+      <div class="col-xs-2 col-sm-2">
+        <%= f.label :Speak %>
+        <%= select_tag(:speak, options_for_select([['Advance', 'Advance'], ['Proficient', 'Proficient'], ['Learner', 'Learner'], ['Advance', 'Advance']], selected: :option )) %>
+      </div>
+
+      <div class="col-xs-2 col-sm-2 ">
+        <%= f.label :Overall %>
+        <%= select_tag(:overall, options_for_select([['Advance', 'Advance'], ['Proficient', 'Proficient'], ['Learner', 'Learner'], ['Advance', 'Advance']], selected: :option )) %>
+      </div>
+
+        <p><%= link_to_remove_association 'Remove' , f  %></p>
+      <br>
+    </div>
+  </div>

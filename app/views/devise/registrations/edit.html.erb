@@ -1,0 +1,140 @@
+
+<br><br>
+<div class="container-fluid bg-info pb70 pt70" style="background: url('<%= asset_path('bg-parallax-2.jpg') %>') 50% 50% repeat;">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 text-center">
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
+            <%= devise_error_messages! %>
+        <!--<form name="form">-->
+          <div class="col-md-12">
+            <h3 class="text-center mb20 color-light mb30">
+              Editing <span class="font-pacifico color-pasific">Profile</span>&nbsp;<span><%= resource_name.to_s.humanize %></span>
+              <small class="color-success">Try to type something to see the different.</small>
+            </h3>
+          </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Profile Picture</label>
+                <%= f.file_field :avatar, :autofocus => true, class: 'input-md input-circle form-control bg-transparent color-light text-center',placeholder: "Picture" %>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>First Name</label>
+                <%= f.text_field :first_name, :autofocus => true, class: 'input-md input-circle form-control bg-transparent color-light text-center',placeholder: "Enter a First Name" %>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Last Name</label>
+                <%= f.text_field :last_name, :autofocus => true, class: 'input-md input-circle form-control bg-transparent color-light text-center',placeholder: "Enter a Last Name" %>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Nationality</label>
+                <%= f.text_field :nationality, :autofocus => true, class: 'input-md input-circle form-control bg-transparent color-light text-center',placeholder: "Enter a Nationality" %>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Email</label>
+                <%= f.email_field :email, class: 'input-md input-circle form-control bg-transparent color-success text-center',placeholder: "Enter a Email" %>
+                <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                <% end %>
+                <!--<input type="text" class="input-md input-circle form-control bg-transparent color-success text-center" placeholder="bg-transparent color-success" maxlength="100">-->
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Password</label>
+                <%= f.password_field :password, :autocomplete => 'off', class: 'input-md input-circle form-control bg-transparent color-warning text-center',placeholder: "Enter a Passowrd" %>
+                <!--<input type="text" class="input-md input-circle form-control bg-transparent color-warning text-center" placeholder="bg-transparent color-warning" maxlength="100">-->
+              </div>
+            </div>
+            <!--class="col-md6 col-sm-6 col-xs-12"-->
+            <div class="col-md-3 ">
+              <div class="form-group">
+                <label>Confirmation Password </label>
+                <%= f.password_field :password_confirmation, class: 'input-md input-circle form-control bg-transparent color-pasific text-center', placeholder: "Confirmation Password"  %>
+                <!--<input type="text" class="input-md input-circle form-control bg-transparent color-pasific text-center" placeholder="bg-transparent color-default" maxlength="100">-->
+              </div>
+            </div>
+
+            <div class="col-md-3 ">
+              <div class="form-group">
+                <label>Current Password </label>
+                <%= f.password_field :current_password, class: 'input-md input-circle form-control bg-transparent color-pasific text-center', placeholder: "Current Password"  %>
+                <!--<input type="text" class="input-md input-circle form-control bg-transparent color-pasific text-center" placeholder="bg-transparent color-default" maxlength="100">-->
+              </div>
+            </div>
+            </div>
+            <%= f.submit "Update" , class: 'text-center button button-md button-circle button-danger mt20' %>
+
+      <% end %>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<div class="container-fluid bg-dark pb70 pt70">
+
+
+<div class="container">
+
+  <div class="col-md-12 bg-success content-box-o-no-border mb30">
+    <div class="row">
+      <div class="col-md-4 ">
+      </div>
+      <div class="col-md-8">
+        <h2>
+          Cancel Account
+        </h2>
+          <small class="heading heading-solid"></small>
+          Unhappy? We'll be sad to see you go.
+
+        <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button button-md button-circle button-danger mt20' , style: "border:1px solid #BC0021;"%>
+
+      </div>
+    </div>
+  </div>
+</div></div>

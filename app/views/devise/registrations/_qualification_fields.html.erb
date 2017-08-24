@@ -1,0 +1,48 @@
+
+  <div class="nested-fields">
+    <br><br>
+    <div class = 'well'>
+
+      <div class="column col-xs-12 col-sm-5">
+        <label for="job_title">Qualification name:</label>
+        <%= f.text_field :name, :class => 'form_group'%>
+      </div>
+
+      <div class="column col-xs-12 col-sm-4">
+        <label for="majors">Major:</label>
+        <%= f.text_field :majors, :class => 'form_group'%>
+      </div>
+
+      <div class="column col-xs-11 col-sm-5">
+        <label for="Qualification type">Qualification Type:</label>
+        <%= f.text_field :type_id, :class => 'form_group'%>
+      </div>
+
+      <div class="column col-xs-12 col-sm-4">
+        <label for="sub type">Qualification Sub Type:</label>
+        <%= f.text_field :sub_type_id, :class => 'form_group'%>
+      </div>
+
+
+    <br>
+    <p><%= link_to_add_association'Add Grades', f, :grades %></p>
+    <%= f.fields_for :grades do |builder| %>
+        <%= render 'grade_fields', :f => builder %>
+    <% end %>
+
+    <p><%= link_to_add_association'Add Education Institute', f, :organizations %></p>
+    <%= f.fields_for :organizations do |builder| %>
+        <%= render 'organization_fields', :f => builder %>
+    <% end %>
+
+    <p>
+      <%= link_to_remove_association 'Remove' , f  %>
+    </p>
+
+
+
+
+
+    </div>
+  </div>
+

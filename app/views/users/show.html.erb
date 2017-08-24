@@ -1,0 +1,61 @@
+
+<!--<br><br><br>-->
+
+<div class="container pb50">
+</div>
+<h4 class="text-center text-uppercase">Profile Info</h4>
+
+<!-- Feature Area
+       ===================================== -->
+<div class="bg-grad-stellar pt100 pb75">
+  <div class="container">
+
+    <div class="row pt50 pb50 bg-gray">
+      <div class="col-md-12 bg-gray content-box-o-no-border ">
+        <h4 class="text-center ">
+          <small class="heading heading-icon heading-icon-rounded center-block bg-blue">
+            <!--<i class="fa fa-heart color-light"></i>-->
+          </small>
+          <%= @user.name.capitalize if @user.name %>
+          <small><%= @user.email if @user.email %></small>
+          <small class="heading-desc text-capitalize">
+            <%= @user.role.role_name.capitalize if @user.role.role_name %>
+          </small>
+        </h4>
+      </div>
+    </div>
+<br>
+    <div class="row">
+
+      <div class="col-md-12 bg-gray content-box-o-no-border mb30">
+        <div class="row">
+          <div class="col-md-4 ">
+            <% if @user.avatar.present? %>
+                <div class="img-rounded">
+                  <%= image_tag(@user.avatar_url :size => "80x60" ,:class=>'img-circle pull-left mr20') if @user.avatar? %>
+                </div>
+            <% end %>
+            <!--<img src="img-other-3.png" alt="features" class="pull-left mr20">-->
+          </div>
+          <div class="col-md-8">
+            <h2>
+Bio Data              <small class="heading heading-solid"></small>
+            </h2>
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+</div>

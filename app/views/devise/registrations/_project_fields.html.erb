@@ -1,0 +1,28 @@
+  <div class="nested-fields">
+    <div class="column col-xs-12 col-sm-6">
+      <label for="name">Project Name:</label>
+      <%= f.text_field :title, :class => 'form_group'%>
+    </div>
+
+    <div class="column col-xs-12 col-sm-6">
+      <label for="Detail">Detail:</label>
+      <%= f.text_field :description, :class => 'form_group'%>
+    </div>
+
+    <div class="column col-xs-12 col-sm-6">
+      <label for="StartDate">Starting Date:</label>
+      <%= f.text_field :start_date, :class => 'form_group'%>
+    </div>
+
+    <div class="column col-xs-12 col-sm-6">
+      <label for="EndDate">Ending Date:</label>
+      <%= f.text_field :end_date, :class => 'form_group'%>
+    </div>
+
+
+    <p><%= link_to_remove_association 'Remove' , f  %></p>
+  </div>
+
+
+
+

@@ -1,0 +1,115 @@
+
+
+
+<!-- Intro Area
+===================================== -->
+<header class="pt100 pb100 parallax-window-2" style="background:url(../img-bg-13.jpg) 0 0 no-repeat #111;">
+  <div class="intro-body text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 pt50">
+          <h1 class="brand-heading font-montserrat text-uppercase color-light" data-in-effect="fadeInDown">
+            We love to serve you in best Maners
+            <small class="color-light alpha7">We are ready for any challenge from you.</small>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- service Area
+===================================== -->
+<div class="pt75 pb50">
+  <div class="container">
+    <div class="row mb35">
+      <h3 class="text-center">
+        We Provide Service as you wish..
+        <small class="heading-desc text-lowercase">
+          Service as you need
+        </small>
+        <small class="heading heading-solid center-block"> </small>
+      </h3>
+    </div>
+
+    <div class="row text-center">
+      <img src="../electrician-3.png" alt="website service" class="img-responsive mb50 hover-wobble-horizontal">
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-pills nav-justified">
+          <li class="active text-uppercase"><a data-toggle="pill" href="#pilljustifiedHome"><i class="fa fa-wordpress mr10"></i> Plumber</a></li>
+          <li class="text-uppercase"><a data-toggle="pill" href="#pilljustified1"><i class="fa fa-joomla mr10"></i> Electrician</a></li>
+          <li class="text-uppercase"><a data-toggle="pill" href="#pilljustified2"><i class="fa fa-drupal mr10"></i> Carpenter</a></li>
+          <li class="text-uppercase"><a data-toggle="pill" href="#pilljustified3"><i class="fa fa-shopping-basket mr10"></i> Cleaner</a></li>
+          <li class="text-uppercase"><a data-toggle="pill" href="#pilljustified4"><i class="fa fa-object-ungroup mr10"></i> Driver</a></li>
+        </ul>
+
+        <div class="tab-content bt-solid-1 mt35">
+          <div id="pilljustifiedHome" class="tab-pane fade in active">
+            <h4 class="text-center">Plumber</h4>
+            <p class="text-center">
+            </p>
+            <p class="text-center">
+            <% if !user_signed_in? %>
+                <%= link_to 'Book a New Request', new_service_path ,:class=> 'button button-md button-blue hover-ripple-out'%>
+                <!--<a class="button button-md button-blue hover-ripple-out">Order Now</a>-->
+            <% end %>
+            </p>
+          </div>
+          <div id="pilljustified1" class="tab-pane fade">
+            <h4 class="text-center">Electrician</h4>
+            <p class="text-center">
+            </p>
+            <p class="text-center">
+              <% if !user_signed_in? %>
+                  <%= link_to 'Book a New Request', new_service_path ,:class=> 'button button-md button-blue hover-ripple-out'%>
+                  <!--<a class="button button-md button-blue hover-ripple-out">Order Now</a>-->
+              <% end %>
+            </p>
+          </div>
+          <div id="pilljustified2" class="tab-pane fade">
+            <h4 class="text-center">Carpenter</h4>
+            <p class="text-center">
+            </p>
+            <p class="text-center">
+              <% if !user_signed_in? %>
+                  <%= link_to 'Book a New Request', new_service_path ,:class=> 'button button-md button-blue hover-ripple-out'%>
+                  <!--<a class="button button-md button-blue hover-ripple-out">Order Now</a>-->
+              <% end %>
+            </p>
+          </div>
+          <div id="pilljustified3" class="tab-pane fade">
+            <h4 class="text-center">Cleaner</h4>
+            <p class="text-center">
+            </p>
+            <p class="text-center">
+              <% if !user_signed_in? %>
+                  <%= link_to 'Book a New Request', new_service_path ,:class=> 'button button-md button-blue hover-ripple-out'%>
+                  <!--<a class="button button-md button-blue hover-ripple-out">Order Now</a>-->
+              <% end %>
+            </p>
+          </div>
+          <div id="pilljustified4" class="tab-pane fade">
+            <h4 class="text-center">Driver</h4>
+            <p class="text-center">
+            </p>
+            <p class="text-center">
+              <% if !user_signed_in? %>
+                  <%= link_to 'Book a New Request', new_service_path ,:class=> 'button button-md button-blue hover-ripple-out'%>
+                  <!--<a class="button button-md button-blue hover-ripple-out">Order Now</a>-->
+              <% end %>
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

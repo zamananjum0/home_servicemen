@@ -1,0 +1,35 @@
+<br><br><br>
+
+<div class="container pb50">
+</div>
+
+
+<!-- Table Style 4 -->
+
+<div class="container pb50 ">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="text-center mb30 danger">Users</h4>
+      <p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+      <table class="table">
+        <thead>
+        <tr class="info">
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="success">
+          <!--<td>John</td>-->
+          <% @users.each do |user| %>
+            <tr class="warning">
+              <%= render user %>
+            </tr>
+        <% end %>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
